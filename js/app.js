@@ -3,20 +3,15 @@ import ReactDOM from 'react-dom';
 import Router from 'react-router';
 import { DefaultRoute, Link, Route, RouteHandler } from 'react-router';
 
-// import LoginHandler from './components/Login.js';
+import GMap from './components/map.js';
 
 class App extends React.Component {
    render() {
-     return (
-      //  <div className="nav">
-      //    <Link to="app">Home</Link>
-      //    <Link to="login">Login</Link>
-       //
-      //    {/* this is the importTant part */}
-      //    <RouteHandler/>
-      //  </div>
-         <div>I DID IT!!</div>
-     );
+      return (
+         <div id="map-container">
+            <GMap mlat="39.0119" mlong="-98.4842"/>
+         </div>
+      );
    }
 }
 

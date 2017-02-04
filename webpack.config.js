@@ -1,17 +1,28 @@
 var webpack = require('webpack');
+
 module.exports = {
-    entry: [
-      'webpack/hot/only-dev-server',
-      "./js/app.js"
-    ],
+   //  entry: [
+   //    'webpack/hot/only-dev-server',
+   //    "./js/app.js"
+   //  ],
+   entry: './js/app.js',
     output: {
         path: __dirname + '/build',
         filename: "bundle.js"
     },
+    resolve: {
+      extensions: ['', '.js', '.jsx']
+    },
     module: {
         loaders: [
-            { test: /\.js?$/, loaders: ['babel'], exclude: /node_modules/ },
-            { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+            { test: /\.js?$/, loader: 'babel', exclude: /node_modules/, query: {
+          cacheDirectory: true,
+          presets: ["es2015", "react", "stage-0"]
+        } },
+            { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader', query: {
+          cacheDirectory: true,
+          presets: ["es2015", "react", "stage-0"]
+        } },
             { test: /\.css$/, loader: "style!css" }
         ]
     },

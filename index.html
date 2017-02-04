@@ -2,14 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>New React App</title>
+    <title>#NationalParks</title>
+    <style>
+      .GMap-canvas {
+         width: 75%;
+   		height: 238px;
+         margin: auto;
+         padding: 100px;
+         border-radius:5px;
+  		   border: 1px solid #e6e6e6;
+      }
+    </style>
   </head>
   <body>
      <p>
         National Parks
      </p>
      <div id="root"></div>
+     <div id="container"></div>
     <section id="react"></section>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvok8WiDTVM2h8Z5jH0M0gxeh9tWNXdy8"></script>
     <script src="bundle.js"></script>
   </body>
 </html>
