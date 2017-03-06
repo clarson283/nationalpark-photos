@@ -16,13 +16,14 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.js?$/, loader: 'babel', exclude: /node_modules/, query: {
-          cacheDirectory: true,
-          presets: ["es2015", "react", "stage-0"]
-        } },
+                cacheDirectory: true,
+                presets: ["es2015", "react", "stage-0"]
+            } },
             { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader', query: {
-          cacheDirectory: true,
-          presets: ["es2015", "react", "stage-0"]
-        } },
+                cacheDirectory: true,
+                presets: ["es2015", "react", "stage-0"]
+            } },
+            { test: /\.json$/, loader: 'json' },
             { test: /\.css$/, loader: "style!css" }
         ]
     },
